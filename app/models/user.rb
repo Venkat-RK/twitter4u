@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
   
   has_many :tweets, :dependent => :destroy
   has_many :followers
-  has_many :followings, :class => "Follower", :foreign_key	=> "follower_id"
+  has_many :followings, :class_name => "Follower", :foreign_key	=> "follower_id"
   
   def login=(login)
     @login = login
