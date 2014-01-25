@@ -1,0 +1,35 @@
+<!--			<img src="images/giff.gif" class="giff_img"/>-->
+			<div class="rser_pswd_cont">
+				<div class="rser_pswd_inn">
+					<div class="photo_user_reset"></div>
+					<div class="rest_psd_opn">
+					<label class="head_caption_rst_pswd">Reset Password</label><br />
+					<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+					<label class="usrn_rst_pswd">User Name</label><br />
+					<table style="font-size:11px;">
+							<tr>
+							<td width="52">New</td>
+							<td width="157" >  <%= f.password_field :password,:class=>"rst_textbox" %></td>
+							</tr>
+							<tr>
+							<td>Confirm</td>
+							<td> <%= f.password_field :password_confirmation,:class=>"rst_textbox" %></td>
+							</tr>
+							<tr>
+							<td width="52">CurrentPassword</td>
+							<td width="157" ><%= f.password_field :current_password,:class=>"rst_textbox" %></td>
+							</tr>
+							<tr>
+							<td></td>
+							<td><%= f.submit "Reset" , :class=>"accept_btn_icon" %><input type="button" value="Cancel" class="cancel_btn_icon"onClick="history.go(-1);return true;" ></td>
+							<!--input type="submit" value="Reset" class="accept_btn_icon" /-->
+							
+							</tr>
+				  </table>
+					</div>
+						<% end %>
+				</div>
+			</div>
+			
+			
+	

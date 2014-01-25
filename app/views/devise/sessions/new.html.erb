@@ -1,0 +1,9 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	USERNAME or Email<br/>
+	<%= f.text_field :login, :autofocus => true%><br/>
+	PASSWORD<br />
+	<%= f.password_field :password, :class=>"login_text_box" %><br/>
+	<%= f.check_box :remember_me %> <%= f.label :remember_me %><br/>
+	<%= f.submit "Sign in", :class=>"sign_in_btn" %><br/>
+<% end %>
+<%= render :partial => "devise/shared/links" %>
